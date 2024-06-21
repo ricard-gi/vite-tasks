@@ -1,17 +1,20 @@
-import { Alert } from "react-bootstrap";
+import { Alert, CloseButton } from "react-bootstrap";
 
 function Llistat({ tasques, eliminarTasca }) {
 
 
     return (
         <>
-            <ul>
+        <br />
                 {tasques.map((e, index) => (
-                    <Alert key={index} variant={'primary'} onClick={()=>eliminarTasca(index)}>
-                        {e}
+                    <Alert key={index} variant={'primary'} >
+                        <div className="d-flex justify-content-between">
+                            {e}
+                            <CloseButton onClick={() => eliminarTasca(index)} />
+                        </div>
                     </Alert>
                 ))}
-            </ul>
+                {tasques.length === 0 && <Alert variant={'danger'}>No hi ha tasques...</Alert>}
 
         </>
     )

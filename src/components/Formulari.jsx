@@ -20,11 +20,11 @@ function Formulari(props) {
         <Form onSubmit={enviarForm} >
             <Form.Group className="mb-3" controlId="tasca">
                 <Form.Label>Nova tasca</Form.Label>
-                <Form.Control type="text" placeholder="tasca..." value={tasca} name="tasca" onChange={handleInput} />
+                <Form.Control type="text" placeholder="entrar nova tasca" value={tasca} name="tasca" onChange={handleInput} />
                 <br />
                 <ModalOpcions setOpcio={setTasca} boto="Opcions" titol="Tria tasca" opcions={["cinema", "bici", "netflix"]} />
                 {' '}
-                <Button type="submit">Enviar</Button>
+                <Button type="submit" disabled={!tasca} >Enviar</Button>
             </Form.Group>
         </Form>
     )

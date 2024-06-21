@@ -20,7 +20,8 @@ function Content(props) {
     return (
         <Container>
             <main>
-                <h1>Contingut...</h1>
+                <h1>Contingut</h1>
+                <hr />
                 <Row>
                     <Col>
                         <Formulari afegirTasca={afegirTasca} />
