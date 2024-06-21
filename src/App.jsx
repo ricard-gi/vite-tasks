@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './components/Content';
 import { useState } from 'react';
+import Alarma from './components/Alarma';
 
 function App() {
 
@@ -14,9 +15,9 @@ function App() {
             <Header titol="La Meva App" lang={lang} setLang={setLang} />
             
             <Content lang={lang} setLang={setLang} />
-
+            <Alarma />
             
-            <Footer idioma={lang} lang={lang} setLang={setLang} />
+            <Footer idioma={lang}  />
         </>
     )
 }
