@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
-
 function Pantalla({ valor }) {
     return (
         <div>
@@ -16,12 +15,11 @@ function Teclat({ clica }) {
 
     return (
         <>
-            <Button onClick={() => clica("A")} >A</Button>
-            <Button onClick={() => clica("B")} >B</Button>
+            <Button onClick={() => clica("G")} >G</Button>{' '}
+            <Button onClick={() => clica("A")} >A</Button>{' '}
+            <Button onClick={() => clica("T")} >T</Button>{' '}
             <Button onClick={() => clica("C")} >C</Button>
-            <Button onClick={() => clica("D")} >D</Button>
         </>
-
     )
 }
 
@@ -41,7 +39,7 @@ function Alarma() {
     return (
         <Container>
             <Row>
-                <Col xs={4}>
+                <Col xs={6}>
                     <Pantalla valor={valor} />
                     <Teclat clica={clica} />
                 </Col >
